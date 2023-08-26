@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web bán hàng</title>
+  <style>
+    /* CSS cho phần header */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* CSS cho danh sách sản phẩm */
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      margin: 20px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* CSS cho phần footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Web bán hàng</h1>
+  </header>
+
+  <div class="product-list">
+    <div class="product">
+      <img src="product1.jpg" alt="Sản phẩm 1">
+      <h3>Sản phẩm 1</h3>
+      <p>Giá: $10</p>
+      <button>Mua hàng</button>
+    </div>
+    <div class="product">
+      <img src="product2.jpg" alt="Sản phẩm 2">
+      <h3>Sản phẩm 2</h3>
+      <p>Giá: $15</p>
+      <button>Mua hàng</button>
+    </div>
+    <div class="product">
+      <img src="product3.jpg" alt="Sản phẩm 3">
+      <h3>Sản phẩm 3</h3>
+      <p>Giá: $20</p>
+      <button>Mua hàng</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Bản quyền © 2023 Web bán hàng</p>
+  </footer>
+</body>
+</html>
