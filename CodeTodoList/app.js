@@ -5,6 +5,7 @@ var todos = document.querySelector('.todos')
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
+    console.log('ok');
     let val = input.value.trim()
 
     if(val){
@@ -17,21 +18,23 @@ form.addEventListener('submit', function(event){
 })
 
 function addTodoElement(todo){
-    var li = document.createAttribute('li')
+    var li = document.createElement('li')
     li.innerHTML =
      `<span>${todo.text}</span>
      <i class="far fa-trash-alt"></i>`
 
-    if(todo.status === 'compited'){
+    if(todo.status === 'completed'){
         li.setAttribute('class', 'completed')
     }
 
     li.addEventListener('click', function(){
         this.classList.toggle('completed')
+        saveTodoList()
     })
 
     li.querySelector('i').addEventListener('click', function(){
         this.parentElement.remove()
+        saveTodoList()
     })
 
     todos.appendChild(li)
@@ -43,13 +46,14 @@ function saveTodoList(){
     todoList.forEach(function(item){
         let text = item.querySelector('span').innerText
         let status = item.getAttribute('class')
+        console.log(status)
         todoStrorage.push({
             text,
             status
         })
     })
 
-    todoStrorage.setItem('todoList', JSON.stringify(todoStrorage))
+    localStorage.setItem('todoList', JSON.stringify(todoStrorage))
 }
 
 function init(){
