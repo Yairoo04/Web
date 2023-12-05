@@ -7,25 +7,29 @@
     <title>Filter Data</title>
 </head>
 <body>
-    <div class="control">
-        <button type="all">All</button>
-        <button type="salad">Salad</button>
-        <button type="meat">Meat</button>
-        <button type="drink">Drink</button>
-        <button type="dessert">Dessert</button>
-    </div>
 
     <div class="container">
-        <img src="image/snack1.png" alt="" type="dessert">
-        <img src="image/snack2.png" alt="" type="salad"> 
-        <img src="image/snack3.png" alt="" type="meat">
-        <img src="image/snack4.png" alt="" type="meat">
-        
-        <img src="image/drink1.png" alt="" type="drink">
-        <img src="image/drink2.png" alt="" type="drink">
-        <img src="image/drink3.png" alt="" type="dessert">
-        <img src="image/drink4.png" alt="" type="dessert">
+        <div class="control">
+            <button type="all" class="active">All</button>
+            <button type="salad">Salad</button>
+            <button type="meat">Meat</button>
+            <button type="drink">Drink</button>
+            <button type="dessert">Dessert</button>
+        </div>
+    
+        <div class="foodContainer">
+            <div class="food"><img src="image/snack1.png" alt="" type="dessert"></div>
+            <div class="food"><img src="image/snack2.png" alt="" type="salad"></div> 
+            <div class="food"><img src="image/snack3.png" alt="" type="meat"></div>
+            <div class="food"><img src="image/snack4.png" alt="" type="meat"></div>
+            
+            <div class="food"><img src="image/drink1.png" alt="" type="drink"></div>
+            <div class="food"><img src="image/drink2.png" alt="" type="drink"></div>
+            <div class="food"><img src="image/drink3.png" alt="" type="dessert"></div>
+            <div class="food"><img src="image/drink4.png" alt="" type="dessert"></div>
+        </div>
     </div>
+    
 </body>
 <script src="app.js"></script>
 </html>
