@@ -1,0 +1,95 @@
+:root {
+    --primary-color: #2c7e57;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #b4c2ff, #0babdb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.formInput input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+button {
+    margin-left: 20px;
+    background:  var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+button:hover {
+    background: #1dd049;
+    color: white;
+    transform: scale(0.9);
+}
+
+.validator {
+    margin-top: 30px;
+    background: var(--primary-color);
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+}
+
+.validator p {
+    margin: 5px;
+}
+
+.validator p::before {
+    content: '\f00d';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    padding: 10px;
+}
+
+.validator p.valid {
+    color: #ccc;
+}
+
+.validator p.valid::before {
+    content: '\f00c';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    padding: 10px;
+    color: white;
+}

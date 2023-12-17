@@ -33,7 +33,7 @@ async function changeWeather(){
 
         body.setAttribute('class', 'warm')
         if(temp <= 25){
-            body.setAttribute('class', 'cool')
+            body.setAttribute('class', 'hot')
         }
 
         if(temp <= 22){
