@@ -27,7 +27,7 @@ function checkEmptyError(listInput) {
             isEmptyError = true;
             showError(input, 'Khong duoc de trong')
         }else{
-            showSuccess(input)
+            showSuccess(input, "ok")
         }
     });
 
@@ -53,12 +53,12 @@ function checkLengthError(input, min, max){
     input.value = input.value.trim()
 
     if(input.value.length < min){
-        showError(input, 'Phai co it nhat ${min} ky tu')
+        showError(input, `Phai co it nhat ${min} ky tu`)
         return true
     }
 
     if(input.value.length > max){
-        showError(input, 'Khong duoc qua ${max} ky tu')
+        showError(input, `Khong duoc qua ${max} ky tu`)
         return true
     }
 
